@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title><%= title %></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="/styles/main.css"/>
+    </head>
+    <body>
+        <header class="p-3 text-bg-dark"> 
+            <div class="container"> 
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> 
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"></a> 
+                            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"> 
+                                <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+                                <li><a href="NewMeal" class="nav-link px-2 text-white">New Meal</a></li> 
+                            </ul> 
+                            <form  action="/search" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" method="POST"> 
+                                <input type="search" class="form-control form-control-dark" placeholder="Get your favorite food" name="search"> 
+                            </form> 
+                            </header>
+        
+        <main class="container">

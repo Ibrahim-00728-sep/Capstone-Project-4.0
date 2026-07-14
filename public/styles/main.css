@@ -1,0 +1,14 @@
+.mygrid{
+    display: grid;
+    /* Creates a responsive grid where cards are at least 120px wide */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px; /* Space between cards */
+    margin-bottom: 40px; /* Space below the grid section */
+}
+.h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+.topImage{
+    height: 100px;
+    width: 80px;
+}

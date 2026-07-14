@@ -1,0 +1,56 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <div class="px-4 py-5 my-5 text-center"> 
+        <% if (meal && meal.meals && meal.meals.length > 0){%>
+            <img class="d-block mx-auto mb-4" src="<%= meal.meals[0].strMealThumb %>" alt="" width="72" height="57"> 
+        <% }else{ %>
+            <img src="/images/foodImage.jpeg" class="card-img-top topImage" alt="your food">
+            <% } %>
+
+        <h1 class="display-5 fw-bold text-body-emphasis">Welcome to My Resturant🥗</h1> 
+        <div class="col-lg-6 mx-auto"> 
+            <p class="lead mb-4"></p> 
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> 
+            </div> 
+        </div> 
+    </div>
+
+
+    <div>
+        <h2 class="h2"> Look through our Categories!</h2>
+
+        <div class="container mygrid">
+            <% if (category && category.categories && category.categories.length > 0){ %>
+                <% category.categories.forEach(cat => { %>
+                <div class="card" style="width: 8rem; text-align: center;">
+                    <img src="<%= cat.strCategoryThumb %>" class="card-img-top">
+                    <p class=""><%= cat.strCategory %></p>
+                </div>
+                <% }); %>
+            <% } %>
+
+            </div>
+    </div>   
+
+    <h3> Try a Random meal😋</h3>
+    <div class="card" style="width: 18rem;">
+        <% if (meal && meal.meals && meal.meals.length > 0){%>
+        <img src="<%= meal.meals[0].strMealThumb %>" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-title"><%= meal.meals[0].strMeal %></h5>
+             <a href="/newmeal" class="btn btn-primary">Try Another Meal</a>
+            <a href="/recipe/<%= meal.meals[0].idMeal %>" class="btn btn-primary">Get recipe</a>
+        </div>
+        <% } else{ %>
+            <img src="/images/foodImage.jpeg" class="card-img-top" alt="your food">
+            <div class="card-body">
+            <h5 class="card-title">No meal found</h5>
+            <a href="/newmeal" class="btn btn-primary">Check Out A Meal</a>
+            </div>
+            <% } %>
+
+           
+</div>
+</div>
+<%- include("partials/footer.ejs")  %>
